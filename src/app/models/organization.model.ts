@@ -1,0 +1,40 @@
+export class OrganizationModel {
+    id:number;
+    name:string;
+    type:string;
+    module:string;
+    sub_type:string;
+    level:string;
+    logo:string;
+    logo_full: string;
+    favicon:string;
+    favicon_white:string;
+    data_enrichment:string;
+    stripe_account_id:string;
+    stripe_account_object:any;
+    users:string;
+    enforce_mfa:any;
+    phone:string;
+    website:string;
+    credit:string;
+    time_zone:string;
+    default_language:string;
+    color_primary:string;
+    color_secondary:string;
+    color_tertiary:string;
+    application_id:string;
+    billing_rate:string;
+    billing_firstname:string;
+    billing_name:string;
+    billing_title:string;
+    billing_email:string;
+    billing_phone:string;
+    billing_address:string;
+    billing_city:string;
+    billing_country:string;
+    billing_province:string;
+    billing_codepostal:string;
+    logo_white: any;
+    logo_full_white: any;
+  }
+  
