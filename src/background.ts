@@ -1,9 +1,15 @@
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.webNavigation.onCompleted.addListener(() => {
-      chrome.tabs.query({ active: true, currentWindow: true }, ([{ id }]) => {
-        if (id) {
-          chrome.action.disable(id);
-        }
+chrome.runtime.onMessageExternal.addListener((request, sender, sendResponse) => {
+    console.log(request);
+    if (request.jwt) {
+        console.log('Token ::: ', request.jwt);
+        chrome.storage.local.set({
+          tokenObject: request.jwt
+        });
+        sendResponse({ success: true, message: 'Token has been received' });
+    } else if(request.logout){
+      chrome.storage.local.set({
+        tokenObject: null
       });
-    }, { url: [{ hostContains: 'google.com' }] });
-  });
+      sendResponse({ success: true, message: 'logout success' });
+    }
+});

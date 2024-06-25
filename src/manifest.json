@@ -1,19 +1,26 @@
 {
-    "name": "Great Extension",
+    "name": "Your App Name",
     "version": "1.0",
-    "description": "Build an Extension with Angular",
+    "description": "Your App Description",
     "manifest_version": 3,
-    "permissions": [
-        "activeTab",
-        "webNavigation",
-        "scripting",
-        "storage"
-    ],
+    "action": {
+      "default_title": "Title",
+      "default_popup": "index.html",
+      "default_icon": "assets/img/logo.png"
+    },
+    "icons": {
+      "32": "assets/img/logo.png",
+      "48": "assets/img/logo.png"
+    },
     "background": {
-        "service_worker": "background.js",
+       "service_worker": "background.js",
         "type": "module"
     },
-    "action": {
-        "default_popup": "index.html"
+    "permissions": [
+      "storage",
+      "identity"
+    ],
+    "externally_connectable": {
+      "matches": ["http://localhost:4200/*"]
     }
-}
+  }

@@ -1,0 +1,61 @@
+.header-container {
+    background-color: white;
+    border-bottom: 1px solid #ECEEF5;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.other-content{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.header.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.header .logo {
+    float: left;
+}
+.header .logo img{
+    height: 21.5px;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.login-btn{
+    /* width: 100%; */
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    text-decoration: auto;
+    background: #4DF189;
+    color: #063622;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.confirmation-text .text{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    color: #1C2436;
+}
+
+.confirmation-text .hand-wave-icon{
+    font-size: 28px;
+}
+.confirmation-text{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.login-to-start{
+    font-size: 14px;
+}
